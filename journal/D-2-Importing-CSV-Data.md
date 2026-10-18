@@ -1,4 +1,4 @@
-# D-1: Importing CSV Data
+# D-2: Importing CSV Data
 
 Continuing from setting up the database, let's look at importing data. Before importing data, we need a table to store it. While we should normally account for data types, for this first attempt, we'll keep it simple and use `text` for everything.
 
