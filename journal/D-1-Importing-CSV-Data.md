@@ -54,3 +54,8 @@ sudo systemctl edit postgresql
 ```
 
 Then, set `ProtectHome=read-only` in the override configuration.
+
+But no need for such odyssey! 
+
+The COPY command reads files from the PostgreSQL server's filesystem,
+whereas we have a better choice of `\copy` which reads files through the psql client. Removing all the complications we did earlier.

@@ -15,8 +15,6 @@ create table import.master_plan(
   description text
 );
 
-COPY master_plan 
-FROM '/home/adarshu/Documents/Coding/curious-moon/cassini-data/master_plan.csv' 
-WITH DELIMITER ',' HEADER CSV;
+\copy master_plan FROM '/home/adarshu/Documents/Coding/curious-moon/cassini-data/master_plan.csv' WITH DELIMITER ',' HEADER CSV;
 
 
