@@ -90,7 +90,7 @@ insert into events(
   spass_type_id
 )
 select 
-  import.master_plan.start_time_utc :: timestamp at time zone 'America/Los_Angeles',
+  import.master_plan.start_time_utc :: timestamp at time zone 'UTC',
   import.master_plan.title,
   import.master_plan.description,
   event_types.id as event_type_id,
