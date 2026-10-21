@@ -42,7 +42,7 @@ add id serial primary key;
 
 create table events(
   id serial primary key,
-  time_stamp timestamp not null,
+  time_stamp timestamptz not null,
   title varchar(500),
   description text,
   event_type_id int references event_types(id),
@@ -65,7 +65,7 @@ insert into events(
   spass_type_id
 )
 select 
-  import.master_plan.start_time_utc :: timestamptz at time zone 'UTC',
+  import.master_plan.start_time_utc :: timestamp at time zone 'America/Los_Angeles',
   import.master_plan.title,
   import.master_plan.description,
   event_types.id as event_type_id,
